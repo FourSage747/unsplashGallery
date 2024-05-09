@@ -1,7 +1,7 @@
-const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '38858047-0e9bab85a13771b942d481ede';
+const BASE_URL = 'https://api.unsplash.com';
+const API_KEY = '047G75j5mTetX2MYJCCkS4hqBPEaNSRfpLYO0x5TWMA';
 
 
-export const searchImages = (searchWord, page) => {
-    return fetch(`${BASE_URL}?q=${searchWord}&page=${page}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=12`);
+export const searchImages = () => {
+    return fetch(`${BASE_URL}/photos/?client_id=${API_KEY}`);
 }
